@@ -114,7 +114,7 @@ resource "azurerm_linux_virtual_machine" "tf_vm" {
   admin_username        = "tfadmin"
   network_interface_ids = [azurerm_network_interface.tf_nic.id]
 
-  custom_data = filebase64("bootstrap.tpl")
+  custom_data = filebase64("custom-data.tpl")
 
   admin_ssh_key {
     username   = "tfadmin"
